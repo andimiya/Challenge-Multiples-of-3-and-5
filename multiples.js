@@ -17,36 +17,26 @@ exports.sumOfAMultiple = function( n ) {
   //var x = x-3 Then add the result to the array
   //n-5 add to array, until 0
 
-
-
     for (var x = 0; x < n; x++) {
-      if (sum < n){
-        var sum = 3 * x;
-        sumArray.push(sum);
-        console.log(sumArray);
+      if (x % 3 === 0) {
+        sum += x;
+        sumArray.push(x);
+        //console.log(sumArray);
+      }
+
+      if (x % 5 === 0) {
+        sum += x;
+        sumArray.push(x);
       }
 
     }
+    console.log(sumArray);
 
-    for (var x = 0; x <= n; x++) {
-      if (sum < n) {
-        var sum = 5 * x;
-        sumArray.push(sum);
-      }
-
-    }
 
     for (var i = 0; i < sumArray.length-1; i++) {
       sum += sumArray[i];
     };
     console.log(sum);
-
-
-  // var x = x-3;
-  // sumArray.push(x);
-  // var x = x-3;
-  // sumArray.push(x);
-  // console.log(sumArray);
 
 
   return sum;
