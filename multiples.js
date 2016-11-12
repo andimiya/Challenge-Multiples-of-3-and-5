@@ -9,9 +9,9 @@ exports.sumOfAMultiple = function( n ) {
   var sumArray = [];
   // do your work here
 
-  //3 * x (1) = sum
-  //3 * x (2)  = sum
-  //up until sum < n
+  //3 * x (1) = sum (3)
+  //3 * x (2)  = sum (6)
+  //up until sum < n (9)
   //add sum to array
 
   //var x = x-3 Then add the result to the array
@@ -19,26 +19,27 @@ exports.sumOfAMultiple = function( n ) {
 
 
 
-    for (var x = 0; x <= 4; x++) {
+    for (var x = 0; x < n; x++) {
       if (sum < n){
         var sum = 3 * x;
         sumArray.push(sum);
-
+        console.log(sumArray);
       }
 
     }
 
-    for (var x = 0; x <=4; x++) {
+    for (var x = 0; x <= n; x++) {
       if (sum < n) {
         var sum = 5 * x;
-        sumArray.push(sum2);
+        sumArray.push(sum);
       }
 
     }
-    console.log(sumArray);
 
-
-
+    for (var i = 0; i < sumArray.length-1; i++) {
+      sum += sumArray[i];
+    };
+    console.log(sum);
 
 
   // var x = x-3;
